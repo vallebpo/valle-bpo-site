@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Depois de configurar o domínio real, inclua aqui a URL absoluta do sitemap.xml.

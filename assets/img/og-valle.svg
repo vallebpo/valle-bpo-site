@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#F7F7F4"/>
+  <circle cx="1060" cy="115" r="230" fill="none" stroke="#E7E9E7" stroke-width="2"/>
+  <circle cx="1060" cy="115" r="178" fill="none" stroke="#E7E9E7" stroke-width="2"/>
+  <rect x="92" y="93" width="8" height="58" rx="2" fill="#315D58"/>
+  <text x="122" y="137" font-family="Georgia, serif" font-size="62" fill="#252A2D" letter-spacing="-2">Valle</text>
+  <text x="124" y="167" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="3" fill="#62696E">BPO FINANCEIRO</text>
+  <line x1="94" y1="230" x2="160" y2="230" stroke="#315D58" stroke-width="2"/>
+  <text x="94" y="297" font-family="Georgia, serif" font-size="57" fill="#252A2D" letter-spacing="-1.8">Seu financeiro organizado</text>
+  <text x="94" y="363" font-family="Georgia, serif" font-size="57" fill="#315D58" letter-spacing="-1.8">para você cuidar do negócio.</text>
+  <text x="96" y="425" font-family="Arial, sans-serif" font-size="23" fill="#62696E">Organização financeira com método e proximidade.</text>
+  <rect x="96" y="500" width="355" height="54" rx="8" fill="#315D58"/>
+  <text x="123" y="534" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Digital por padrão. Próxima quando necessário.</text>
+  <circle cx="1054" cy="476" r="68" fill="#EAF0EE"/>
+  <path d="M1018 474l25 25 51-54" fill="none" stroke="#315D58" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
