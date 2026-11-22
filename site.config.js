@@ -15,8 +15,8 @@ window.SITE_CONFIG = {
     // WhatsApp internacional: somente números, incluindo país e DDD. Ex.: 55 + DDD + número.
     whatsapp: "5561999045027",
     defaultMessage: "Olá! Vim pelo site da Valle BPO Financeiro e gostaria de conversar sobre ",
-    email: "",
-    phone: "",
+    email: "vallebpo@gmail.com",
+    phone: "+55 (61) 99904-5027",
     city: "",
     address: ""
   },
