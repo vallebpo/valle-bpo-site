@@ -133,8 +133,8 @@
   if (footerContact) {
     const items = [];
     if (validWhatsapp) items.push({ label: "WhatsApp", href: "https://wa.me/" + whatsappNumber, external: true });
-    if (contact.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact.email)) items.push({ label: contact.email, href: "mailto:" + contact.email });
-    if (contact.phone) items.push({ label: contact.phone, href: "tel:" + contact.phone.replace(/[^+\d]/g, "") });
+    if (contact.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact.email)) items.push({ label: contact.email });
+    if (contact.phone) items.push({ label: contact.phone });
     if (contact.city) items.push({ label: contact.city });
     if (contact.address) items.push({ label: contact.address });
     Object.entries(institutional.social || {}).forEach(([network, url]) => {
