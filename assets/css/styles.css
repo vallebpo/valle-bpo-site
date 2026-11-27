@@ -146,3 +146,352 @@ a{color:inherit}button{font:inherit}svg{width:20px;height:20px;fill:none;stroke:
     padding: 12px 1px;
   }
 }
+
+/* =========================================================
+   Planos e investimento — Valle BPO Financeiro
+   Estilos isolados da seção #planos
+   ========================================================= */
+.plans-section {
+  background: var(--paper);
+}
+
+.plans-intro {
+  margin-bottom: 25px;
+}
+
+.plans-included {
+  max-width: 920px;
+  margin: 0 0 30px;
+  padding-left: 15px;
+  border-left: 2px solid var(--gold);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 18px;
+}
+
+.plan-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 28px 25px 24px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--white);
+  box-shadow: 0 9px 28px rgba(26, 48, 40, .045);
+}
+
+.plan-card-featured {
+  border-color: rgba(24, 61, 53, .38);
+  box-shadow: 0 13px 34px rgba(26, 48, 40, .085);
+}
+
+.plan-recommended {
+  position: absolute;
+  top: 19px;
+  right: 21px;
+  padding: 5px 9px;
+  border-radius: 3px;
+  background: var(--green-soft);
+  color: var(--green);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .35px;
+}
+
+.plan-kicker {
+  margin: 0 0 11px;
+  color: #8C744D;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 1.45px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.plan-card-featured .plan-kicker {
+  padding-right: 96px;
+}
+
+.plan-card h3,
+.custom-plan h3 {
+  margin: 0;
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: 27px;
+  font-weight: 400;
+  letter-spacing: -.6px;
+  line-height: 1.15;
+}
+
+.plan-description {
+  min-height: 62px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.plan-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 6px;
+  margin-top: 23px;
+  padding-top: 17px;
+  border-top: 1px solid var(--line);
+}
+
+.plan-price span {
+  flex-basis: 100%;
+  margin-bottom: 2px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.plan-price strong {
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: clamp(29px, 2.6vw, 36px);
+  font-weight: 400;
+  letter-spacing: -1.1px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.plan-price small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.plan-features {
+  display: grid;
+  gap: 11px;
+  margin: 23px 0 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.plan-features li {
+  position: relative;
+  padding-left: 15px;
+  color: var(--ink);
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.plan-features li::before {
+  position: absolute;
+  top: .62em;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #8BA497;
+  content: "";
+}
+
+.plan-limits {
+  margin-top: auto;
+  padding: 13px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.plan-limits summary,
+.plans-note details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--green);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 750;
+  list-style: none;
+}
+
+.plan-limits summary::-webkit-details-marker,
+.plans-note details summary::-webkit-details-marker {
+  display: none;
+}
+
+.plan-limits summary::after,
+.plans-note details summary::after {
+  color: #9A8056;
+  content: "+";
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.plan-limits[open] summary::after,
+.plans-note details[open] summary::after {
+  content: "−";
+}
+
+.plan-limits ul {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0 2px;
+  padding-left: 16px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.plan-button {
+  width: 100%;
+  justify-content: center;
+  margin-top: 22px;
+  padding-inline: 12px;
+  font-size: 11px;
+}
+
+.plan-button svg {
+  flex: 0 0 auto;
+}
+
+.custom-plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 19px;
+  padding: 23px 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .58);
+}
+
+.custom-plan .plan-kicker {
+  margin-bottom: 7px;
+}
+
+.custom-plan h3 {
+  font-size: 23px;
+}
+
+.custom-plan p:not(.plan-kicker) {
+  max-width: 650px;
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.custom-plan .text-link {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.plans-note {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: start;
+  gap: 25px;
+  margin-top: 19px;
+  padding-top: 17px;
+  border-top: 1px solid rgba(24, 61, 53, .12);
+}
+
+.plans-note > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.75;
+}
+
+.plans-note details p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.75;
+}
+
+@media(max-width:960px) {
+  .plans-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .plan-card:last-child {
+    grid-column: 1 / -1;
+    width: calc((100% - 18px) / 2);
+    justify-self: center;
+  }
+}
+
+@media(max-width:760px) {
+  .plans-intro {
+    margin-bottom: 21px;
+  }
+
+  .plans-included {
+    margin-bottom: 23px;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .plan-card:last-child {
+    grid-column: auto;
+    width: auto;
+  }
+
+  .plan-card {
+    padding: 25px 23px 22px;
+  }
+
+  .plan-description {
+    min-height: 0;
+    max-width: 440px;
+  }
+
+  .plan-price strong {
+    font-size: 34px;
+  }
+
+  .custom-plan {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    padding: 22px;
+  }
+
+  .plans-note {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+@media(max-width:430px) {
+  .plan-card {
+    padding: 23px 20px 20px;
+  }
+
+  .plan-recommended {
+    top: 17px;
+    right: 17px;
+  }
+
+  .plan-card h3 {
+    font-size: 25px;
+  }
+
+  .custom-plan {
+    padding: 20px;
+  }
+
+  .custom-plan .text-link {
+    white-space: normal;
+  }
+}
+
