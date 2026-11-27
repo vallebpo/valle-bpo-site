@@ -1,84 +1,153 @@
-# Valle BPO Financeiro — site institucional
+# Valle BPO Financeiro — Site institucional
 
-Site institucional de página única, criado com HTML5 semântico, CSS e JavaScript puro. Não utiliza framework, gerenciador de pacotes, terminal ou build step: pode ser publicado como arquivos estáticos no GitHub Pages.
+Site institucional e comercial da **Valle BPO Financeiro**, desenvolvido como uma página estática, responsiva e de fácil manutenção.
 
-## Estrutura
+- **Site publicado:** https://vallebpo.github.io/valle-bpo-site/
+- **Repositório:** https://github.com/vallebpo/valle-bpo-site
+- **Posicionamento:** Organização financeira com método e proximidade.
+- **Conceito:** Digital por padrão. Próxima quando necessário.
 
-- `index.html` — página principal e conteúdo comercial.
-- `politica-de-privacidade.html` — minuta de política de privacidade; exige revisão jurídica antes da publicação definitiva.
-- `site.config.js` — configuração central de marca, contatos, dados institucionais, formulário, analytics e cores.
-- `assets/css/styles.css` — identidade visual responsiva, componentes e estados de foco.
-- `assets/js/main.js` — menu acessível, FAQ, configuração de links, SEO estruturado e lógica do formulário.
-- `assets/img/favicon.svg` — favicon tipográfico.
-- `assets/img/og-valle.svg` — imagem vetorial de compartilhamento, usada quando a URL real estiver configurada.
-- `robots.txt` e `sitemap.xml` — arquivos iniciais de indexação; completar o sitemap após definir a URL pública.
+## Sobre o projeto
 
-## Como editar a configuração
+O site apresenta a Valle BPO Financeiro, seus serviços, públicos atendidos, processo de trabalho, planos comerciais, treinamentos complementares e canais de contato.
 
-Abra `site.config.js` no GitHub e clique no ícone de lápis para editar. Os campos vazios devem permanecer vazios até a Valle confirmar os dados reais.
+A implementação utiliza **HTML, CSS e JavaScript puro**, sem frameworks, gerenciador de pacotes ou etapa de compilação. Os arquivos podem ser editados diretamente pelo navegador no GitHub e publicados pelo GitHub Pages.
 
-- `brand`: nome, descritor e conceitos da marca.
-- `contact.whatsapp`: número em formato internacional, apenas números, incluindo código do país e DDD (por exemplo, `55` + DDD + número, sem sinal de `+`, espaços ou parênteses).
-- `contact.email`, `contact.phone`, `contact.city` e `contact.address`: canais e localização que a empresa decidir publicar.
-- `institutional.legalName` e `institutional.cnpj`: dados legais validados.
-- `institutional.domain` e `institutional.canonicalUrl`: URLs HTTPS reais, depois de definir o domínio/URL pública.
-- `institutional.social`: URLs reais dos perfis oficiais.
-- `form.endpoint`: endpoint HTTPS de um serviço de formulários. Confirme a integração e as regras de privacidade do fornecedor antes de ativar.
-- `form.destinationEmail`: e-mail que receberá a mensagem quando o fallback por e-mail for usado. Preencher este campo não cria um servidor nem envia formulário automaticamente.
-- `analytics`: os campos são ganchos de integração; a versão entregue não carrega scripts de terceiros. Qualquer implementação futura precisa de avaliação de privacidade/consentimento.
-- `theme.colors`: tokens de cor aplicados pelo JavaScript sobre os valores de fallback em CSS.
+## Conteúdo do site
 
-Para atualizar a copy, edite o conteúdo em `index.html`. Não use clientes, depoimentos, resultados, endereços, números ou certificações sem confirmação real. As respostas do FAQ referentes a implantação, sistemas compatíveis e escopo devem ser revistas pela empresa antes da publicação.
+A página principal (`index.html`) reúne as seguintes seções:
 
-## Formulário e contatos
+- **Início:** apresentação e proposta de valor da Valle.
+- **Serviços:** contas a pagar e receber, faturamento e cobranças, conciliação financeira, fluxo de caixa, relatórios, organização financeira e integração com a contabilidade.
+- **Para quem:** profissionais e empresas prestadoras de serviços, incluindo advocacia, tecnologia e saúde.
+- **Como funciona:** entendimento, organização, execução e acompanhamento.
+- **Planos e investimento:** planos Essencial, Profissional, Premium e Personalizado.
+- **Sobre a Valle:** posicionamento e forma de atuação.
+- **Treinamentos:** serviço complementar para equipes.
+- **Dúvidas frequentes:** informações sobre o BPO Financeiro e o escopo de atuação.
+- **Contato:** canais institucionais e acesso ao WhatsApp.
 
-O formulário valida os campos no navegador e utiliza um campo honeypot básico. Ele **não** simula confirmação de envio:
+## Planos comerciais apresentados
 
-1. Se `form.endpoint` estiver configurado, o site envia os dados por `POST` e só exibe confirmação depois de receber uma resposta HTTP de sucesso do endpoint.
-2. Sem endpoint, tenta preparar uma mensagem no WhatsApp configurado.
-3. Se não houver WhatsApp, tenta abrir o cliente de e-mail usando `form.destinationEmail` ou `contact.email`.
-4. Se nenhum canal estiver definido, informa que o envio não está configurado e não declara sucesso.
+Os valores abaixo são preços iniciais exibidos no site. A proposta final depende do volume de operações e da complexidade da rotina financeira. A implantação inicial é dimensionada separadamente.
 
-O número de WhatsApp e os canais de contato estão vazios por padrão, para evitar publicação de informação inventada. Antes de anunciar o site, configure pelo menos um canal de contato funcional e faça um teste real.
+| Plano | Investimento inicial | Principais características |
+|---|---:|---|
+| Essencial | R$ 890/mês | 2 ciclos de execução por semana, conciliação semanal e resumo financeiro mensal. |
+| Profissional | R$ 1.490/mês | 3 ciclos de execução por semana, conciliação duas vezes por semana e fluxo de caixa projetado para 30 dias. |
+| Premium | R$ 2.390/mês | 4 ciclos de execução por semana, conciliação três vezes por semana e fluxo de caixa projetado para 60 dias. |
+| Personalizado | Sob consulta | Serviços, volume e frequência definidos conforme a operação. |
 
-## Fontes e recursos externos
+### Limites operacionais divulgados
 
-A página usa pilhas de fontes do sistema, sem buscar fontes ou bibliotecas externas. Isso mantém o site sem dependências de terceiros e sem requisições de fontes externas. Caso a Valle escolha fontes de marca específicas, obtenha os arquivos e licenças apropriados e hospede-os em `assets/fonts/`, atualizando o CSS.
+| Critério mensal | Essencial | Profissional | Premium |
+|---|---:|---:|---:|
+| Movimentações financeiras | Até 60 | Até 120 | Até 220 |
+| Contas bancárias | 1 | Até 2 | Até 3 |
+| Emissões de NFS-e | Até 10 | Até 25 | Até 50 |
+| Cobranças acompanhadas | Até 15 | Até 30 | Até 60 |
 
-## Publicar no GitHub Pages pelo navegador
+A conciliação de uma movimentação já contabilizada não gera uma segunda contagem. Transferências entre contas próprias não são consideradas duas operações. Cada cobrança acompanhada inclui um contato inicial e uma reiteração. A quantidade de clientes, fornecedores e a complexidade dos sistemas também podem influenciar a proposta.
 
-1. Crie um repositório público para o site e inclua os arquivos mantendo os caminhos e pastas desta estrutura.
-2. Na página do repositório, acesse **Settings** → **Pages**.
-3. Em **Build and deployment**, selecione **Deploy from a branch**.
-4. Selecione a branch principal (normalmente `main`) e a pasta `/(root)`; clique em **Save**.
-5. Aguarde a conclusão do deploy indicada pelo GitHub Pages e abra o endereço mostrado na mesma seção.
-6. Sempre que alterar arquivos e salvar um commit, o GitHub Pages publicará a atualização automaticamente.
+## Estrutura de arquivos
 
-Também é possível hospedar estes arquivos em hospedagem estática como Netlify, Vercel, Cloudflare Pages ou hospedagem tradicional. O projeto não depende desses provedores.
+```text
+.
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   ├── img/
+│   │   └── favicon.svg
+│   └── js/
+│       └── main.js
+├── index.html
+├── politica-de-privacidade.html
+├── robots.txt
+├── sitemap.xml
+├── site.config.js
+└── README.md
+```
 
-## SEO e domínio
+### Arquivos principais
 
-- O `title`, a descrição e metadados Open Graph/Twitter são fornecidos no HTML.
-- O `canonicalUrl`, quando configurado com uma URL HTTPS real, ativa a URL canônica e as imagens absolutas de compartilhamento.
-- O JavaScript gera dados estruturados Organization e FAQPage com as informações disponíveis na página/configuração.
-- Antes de indexar, preencha o `sitemap.xml` com URLs absolutas reais e inclua sua URL em `robots.txt`. Não publique URLs de exemplo.
-- O endereço exato de projeto do GitHub Pages depende do nome de usuário e repositório. Preencha esses dados somente depois de conhecer a URL publicada.
-- A imagem `og-valle.svg` é vetorial; valide sua compatibilidade com os canais de compartilhamento que serão utilizados.
+| Arquivo | Responsabilidade |
+|---|---|
+| `index.html` | Conteúdo, estrutura, navegação, seções e chamadas para contato. |
+| `assets/css/styles.css` | Identidade visual, componentes, espaçamentos e responsividade. |
+| `assets/js/main.js` | Comportamentos do menu, atualização de marca e contatos, links do WhatsApp e ano do rodapé. |
+| `site.config.js` | Configuração central da marca, contatos, dados institucionais e cores. |
+| `politica-de-privacidade.html` | Página de informações sobre privacidade. Deve refletir as práticas reais da empresa. |
+| `robots.txt` | Orientações básicas para robôs de indexação. |
+| `sitemap.xml` | Estrutura inicial do mapa do site; completar quando a URL canônica/domínio definitivo estiver configurado. |
 
-## Checklist obrigatório antes da publicação comercial
+## Configuração da marca e dos contatos
 
-- [ ] Configurar e testar número de WhatsApp, e-mail ou endpoint real.
-- [ ] Confirmar razão social, CNPJ, endereço e cidade, se forem exibidos.
-- [ ] Definir domínio/URL canônica e atualizar sitemap/robots.
-- [ ] Revisar juridicamente e aprovar a política de privacidade; definir canal para solicitações de titulares e avaliar encarregado.
-- [ ] Revisar as respostas do FAQ sobre implantação, compatibilidade de sistemas, escopo e procedimentos internos.
-- [ ] Confirmar se o formulário realmente precisa de um endpoint e entender o tratamento dos dados pelo fornecedor escolhido.
-- [ ] Confirmar fontes licenciadas, logotipo oficial (se existir), redes sociais e imagem de compartilhamento.
-- [ ] Testar em larguras de aproximadamente 360 px, 768 px e 1440 px; revisar menu por teclado, foco, formulário, FAQ, links e ausência de rolagem horizontal.
-- [ ] Testar o formulário com uma mensagem real e confirmar o recebimento no canal/serviço configurado.
+As informações centrais ficam em `site.config.js`. Para editá-las pelo navegador:
 
-## Segurança e privacidade
+1. Abra o arquivo `site.config.js` no repositório do GitHub.
+2. Clique no ícone de lápis para editar.
+3. Atualize somente os campos necessários.
+4. Clique em **Commit changes** para salvar.
 
-Não inclua senhas, chaves secretas, tokens ou credenciais em arquivos do front-end. Tudo que está no repositório público pode ser lido por qualquer pessoa. O site não carrega analytics de terceiros por padrão. O formulário transmite dados a terceiros somente se um endpoint/canal for configurado e acionado; documente isso na política revisada.
+Principais grupos de configuração:
 
-A hospedagem estática não permite criar segredos de servidor nem processar dados sensíveis com segurança apenas pelo JavaScript do navegador. Cabeçalhos de segurança avançados devem ser configurados no provedor/CDN quando suportados; veja a documentação do provedor escolhido.
+- `brand`: nome da empresa, nome curto, descritor e mensagens institucionais.
+- `contact.whatsapp`: número no formato internacional, contendo apenas números (país + DDD + número, sem `+`, espaços ou parênteses).
+- `contact.defaultMessage`: mensagem padrão usada nos links de WhatsApp que não possuem uma mensagem própria.
+- `contact.email` e `contact.phone`: e-mail e telefone apresentados no rodapé.
+- `institutional`: dados institucionais, URL canônica e perfis sociais. Preencha apenas informações confirmadas e URLs oficiais.
+- `theme.colors`: cores centrais da identidade visual.
+
+Os botões de contato usam o atributo `data-whatsapp`. Quando o botão também possui `data-message`, essa mensagem específica é usada para iniciar a conversa. Por isso, os botões dos planos podem abrir o WhatsApp com mensagens diferentes para Essencial, Profissional, Premium e Personalizado.
+
+O `main.js` monta os links com base no número configurado. Se o número não for válido, os elementos de WhatsApp são ocultados. O telefone e o e-mail do rodapé são apresentados como texto; os links externos de WhatsApp e redes sociais são configurados pelo JavaScript.
+
+## Como atualizar o conteúdo
+
+- **Textos e seções:** edite o `index.html`.
+- **Planos, preços e limites:** edite os cartões da seção `id="planos"` no `index.html`. Mantenha os valores, frequências e limites coerentes com a proposta comercial vigente.
+- **Aparência e adaptação para telas menores:** edite o `assets/css/styles.css`.
+- **Contatos, marca e cores configuráveis:** edite o `site.config.js`.
+- **Comportamentos do menu e dos links:** edite o `assets/js/main.js` somente quando houver necessidade funcional.
+
+Ao alterar nomes de classes, atributos `data-*` ou identificadores de seções, confira também os seletores e comportamentos que dependem deles. Os links do menu utilizam os identificadores das seções, como `#servicos`, `#processo` e `#planos`.
+
+## Publicação pelo GitHub Pages
+
+O projeto pode ser mantido e publicado inteiramente pelo navegador, sem terminal ou instalação de ferramentas.
+
+1. Abra o repositório no GitHub.
+2. Acesse **Settings → Pages**.
+3. Em **Build and deployment**, escolha **Deploy from a branch**.
+4. Selecione a branch `main` e a pasta `/(root)`.
+5. Salve a configuração, se necessário.
+6. Acompanhe a publicação indicada pelo GitHub Pages e abra a URL apresentada.
+
+Depois da configuração inicial, cada commit na branch e pasta publicadas inicia a atualização do site. Caso a alteração não apareça imediatamente, atualize a página sem usar o cache (`Ctrl + F5`).
+
+## Verificação antes de publicar alterações
+
+Após cada atualização, confira:
+
+- Navegação no computador e no celular.
+- Links do menu e rolagem para cada seção.
+- Botões de WhatsApp e mensagens específicas dos planos.
+- Expansão dos detalhes de limites operacionais.
+- Leitura dos cartões em telas menores e ausência de rolagem horizontal.
+- E-mail, telefone e demais informações de contato.
+- Acesso à página de privacidade.
+- Consistência entre os preços, limites apresentados no site e propostas comerciais enviadas aos clientes.
+
+## Privacidade e segurança
+
+O site é estático. A versão atual não possui banco de dados, área de login, formulário de cadastro ou painel administrativo. O JavaScript configura a navegação e os canais de contato no navegador; os links de WhatsApp direcionam o visitante para o serviço externo.
+
+Como o repositório é público, todo conteúdo incluído nos arquivos pode ser acessado por terceiros. **Não inclua senhas, tokens, chaves privadas, credenciais bancárias, documentos de clientes ou informações financeiras confidenciais no código.** Não utilize o site estático para receber ou armazenar documentos financeiros sensíveis.
+
+A página de privacidade deve ser revisada para corresponder aos canais efetivamente utilizados, às informações apresentadas e às práticas reais da Valle. Antes de adicionar ferramentas externas, rastreadores ou mecanismos de coleta de dados, avalie os impactos de privacidade e atualize a documentação correspondente.
+
+---
+
+**Valle BPO Financeiro**  
+Organização financeira com método e proximidade.  
+Digital por padrão. Próxima quando necessário.
